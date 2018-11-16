@@ -3,40 +3,50 @@ enchant();
 
 window.onload = function(){
 
-    var game = new Core(1080, 1920);
+var core = new Core(1080, 1920);
 
-    game.fps = 15;
+// シーンを生成する
+var _ss = new StoryScene(core);
 
 
-    game.preload("img/chara1.png","img/chara2.png","img/chara3.png","img/フレーム.png","img/背景.png","img/テキストエリア.png");
+    core.fps = 15;
 
- 
-     game.onload = function(){
 
-        c1 = new Sprite(720, 1220);
-        f1 = new Sprite(1080, 1920);
-        b1 = new Sprite(1080, 1920);
-        t1 = new Sprite(1080, 570);
+    core.preload("img/chara1.png","img/chara2.png","img/chara3.png","img/フレーム.png","img/背景.png","img/テキストエリア.png","img/主人公.png");
 
-        c1.image = game.assets["img/chara2.png"];
-        f1.image = game.assets["img/フレーム.png"];
-        b1.image = game.assets["img/背景.png"];
-        t1.image = game.assets["img/テキストエリア.png"];
+
+    core.onload = function(){
 
 
 
-        c1.x = 100;
-        c1.y = 300;
 
-        c1.frame = 5;
+        //レイヤーで管理する
+        bgLayer = new Group();
+        core.rootScene.addChild(bgLayer);
+        
+        imageLayer = new Group();
+        core.rootScene.addChild(imageLayer);
 
-        t1.y = 1220;
+        taLayer = new Group();
+        core.rootScene.addChild(taLayer);
 
-        game.rootScene.addChild(b1);
-        game.rootScene.addChild(c1);
-        game.rootScene.addChild(t1);
-        game.rootScene.addChild(f1);
+        textLayer = new Group();
+        core.rootScene.addChild(textLayer);
 
+        frameLayer = new Group();
+        core.rootScene.addChild(frameLayer);
+
+
+        _ss.SetBackGroundImage("img/背景.png");
+
+        //_ss.SetCharactor("img/主人公.png");
+        _ss.SetCharactor("img/chara2.png");
+
+
+        _ss.SetTextAreaImage();
+
+
+  
 
         var myLabel = new Label("モンスターが現れた！");
         myLabel.font = "50px Palatino";
@@ -46,12 +56,14 @@ window.onload = function(){
         myLabel.width = 1080;
         myLabel.height = 570;
         // ラベルを画面に表示
-        game.rootScene.addChild(myLabel);
+        core.rootScene.addChild(myLabel);
 
-
+        _ss.SetFrameImage();
+        
+        
 
 
     };
 
-    game.start();
+    core.start();
 };
