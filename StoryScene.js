@@ -88,12 +88,12 @@ class StoryScene{
           //発言者がいない場合は無視する
           if(args[0] != ""){
           let whosay = new Label("「" + args[0] + "」");
-          whosay.font  = "16px monospace";
-          whosay.color = "rgb(0, 0, 0)";
-          whosay.y     = 180;
-          whosay.x = 10;
-          whosay.width = 300;
-          whosay.height = 120;
+          whosay.font  = "50px monospace";
+          whosay.color = "rgb(255, 255, 255)";
+          whosay.y     = 1300;
+          whosay.x     = 100;
+          whosay.width = 1080;
+          whosay.height = 570;
           whosay.opacity = 0;
           whosay.tl.fadeIn(15);
   
@@ -103,12 +103,12 @@ class StoryScene{
   
           //発言内容を表示する
           let text = new Label( args[i] );
-          text.font  = "16px monospace";
-          text.color = "rgb(0, 0, 0)";
-          text.y     = 200;
-          text.x = 10;
-          text.width = 300;
-          text.height = 120;
+          text.font  = "50px monospace";
+          text.color = "rgb(255, 255, 255)";
+          text.y     = 1400;
+          text.x     = 100;
+          text.width = 1080;
+          text.height = 570;
   
           text.opacity = 0;
           text.tl.fadeIn(15);
@@ -117,20 +117,20 @@ class StoryScene{
   
           //次へボタン
           let nextlabel = new Label("< ▼ >");
-          nextlabel.font  = "16px monospace";
-          nextlabel.color = "rgb(0, 0, 0)";
-          nextlabel.y     = 280;
-          nextlabel.x = 270;
+          nextlabel.font  = "50px monospace";
+          nextlabel.color = "rgb(255, 255, 255)";
+          nextlabel.y     = 1690;
+          nextlabel.x = 850;
           nextlabel.opacity = 0;
           nextlabel.tl.fadeIn(20);
           textLayer.addChild(nextlabel);
   
           //戻るボタン
           let backLabel = new Label("< ▲ >");
-          backLabel.font  = "16px monospace";
-          backLabel.color = "rgb(0, 0, 0)";
-          backLabel.y     = 280;
-          backLabel.x = 0;
+          backLabel.font  = "50px monospace";
+          backLabel.color = "rgb(255, 255, 255)";
+          backLabel.y     = 1690;
+          backLabel.x = 50;
           backLabel.opacity = 0;
           backLabel.tl.fadeIn(20);
           textLayer.addChild(backLabel);
@@ -199,7 +199,7 @@ class StoryScene{
     //選択肢１
     let text = new Label(args[0]);
     text.font  = "16px monospace";
-    text.color = "rgb(0, 0, 0)";
+    text.color = "rgb(255, 255, 255)";
     text.y     = 180;
     text.x = 10;
     text.width = 300;
@@ -215,7 +215,7 @@ class StoryScene{
     //選択肢２
     let text2 = new Label(args[2]);
     text2.font  = "16px monospace";
-    text2.color = "rgb(0, 0, 0)";
+    text2.color = "rgb(255, 255, 255)";
     text2.y     = 230;
     text2.x = 10;
     text2.width = 300;

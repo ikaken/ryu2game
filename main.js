@@ -36,30 +36,20 @@ var _ss = new StoryScene(core);
         frameLayer = new Group();
         core.rootScene.addChild(frameLayer);
 
+        //テキストエリアとフレームをセットする
+        _ss.SetTextAreaImage();
+        _ss.SetFrameImage();
+
 
         _ss.SetBackGroundImage("img/背景.png");
-
-        //_ss.SetCharactor("img/主人公.png");
-        _ss.SetCharactor("img/chara2.png");
-
-
-        _ss.SetTextAreaImage();
+        _ss.SetCharactor("img/主人公.png");
+        //_ss.SetCharactor("img/chara2.png");
 
 
-  
 
-        var myLabel = new Label("モンスターが現れた！");
-        myLabel.font = "50px Palatino";
-        myLabel.x = 100;	// X座標
-        myLabel.y = 1300;	// Y座標
-        myLabel.color = "rgb(255, 255, 255)";
-        myLabel.width = 1080;
-        myLabel.height = 570;
-        // ラベルを画面に表示
-        core.rootScene.addChild(myLabel);
 
-        _ss.SetFrameImage();
-        
+
+        _ss.SetText(['モンスターが現れた！','違った、主人公だったｗ']);
         
 
 
