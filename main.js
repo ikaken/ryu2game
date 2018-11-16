@@ -30,11 +30,12 @@ var _ss = new StoryScene(core);
         taLayer = new Group();
         core.rootScene.addChild(taLayer);
 
+        frameLayer = new Group();
+        core.rootScene.addChild(frameLayer);
+        
         textLayer = new Group();
         core.rootScene.addChild(textLayer);
 
-        frameLayer = new Group();
-        core.rootScene.addChild(frameLayer);
 
         //テキストエリアとフレームをセットする
         _ss.SetTextAreaImage();
