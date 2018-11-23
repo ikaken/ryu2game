@@ -1,10 +1,9 @@
-//実際のゲームのシナリオが見えてしまうので
-//必要部分のみ掲載
+
 
 titlescene = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'yeki.jpg',
-  'SetChoiceScene': [" ▶︎ もう一度プレイする","scene1"," ▶︎ すごいヒントを見る","sugoihinto"],
+  'SetBackGroundImage' : 'img/背景.png',
+  'SetChoiceScene': [" ▶︎ もう一度プレイする","sceneA001"," ▶︎ モンスターからやり直す","sceneA003"],
 }
 
 
@@ -29,7 +28,7 @@ sceneA003 = {
   'SetBackGroundImage' : 'img/背景.png',
   'SetCharactor': 'img/chara2.png',
   'SetText': ["モンスターが現れた！","本当に現れた！？","寿限無、寿限無  五劫の擦り切れ  海砂利水魚の  水行末 雲来末 風来末  食う寝る処に住む処  藪ら柑子の藪柑子  パイポ　パイポ　パイポのシューリンガン  シューリンガンのグーリンダイ  グーリンダイのポンポコピーのポンポコナーの  長久命の長助"],
-  'SetNextSceneName' : 'sceneA001'
+  'SetNextSceneName' : 'titlescene'
 }
 
 

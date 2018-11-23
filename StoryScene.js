@@ -197,7 +197,10 @@ class StoryScene{
       textLayer.removeChild(textLayer.firstChild);
       textLayer.removeChild(textLayer.lastChild);
       textLayer.removeChild(textLayer.lastChild);
-      textLayer.removeChild(textLayer.firstChild);
+      touchLayer.removeChild(touchLayer.firstChild);
+      touchLayer.removeChild(touchLayer.firstChild);
+      touchLayer.removeChild(touchLayer.firstChild);
+      touchLayer.removeChild(touchLayer.firstChild);
   
 
 
@@ -215,20 +218,23 @@ class StoryScene{
   /*       選択肢のある画面です             */
   
   SetChoiceScene(args){
+
+    var _this = this;
+
     //選択肢１
     let text = new Label(args[0]);
     text.font  = "50px monospace";
     text.color = "rgb(255, 255, 255)";
     text.y     = 1400;
     text.x     = 100;
-    text.width = 1080;
+    text.width = 1080 - 200;
     text.height = 570;
   
     touchLayer.addChild(text);
   
     //シーン名が渡されます
     text.addEventListener('touchstart',function(e){
-        this.GoNextScene(eval(args[1]));
+      _this.GoNextScene(eval(args[1]));
     });
   
     //選択肢２
@@ -237,14 +243,14 @@ class StoryScene{
     text2.color = "rgb(255, 255, 255)";
     text2.y     = 1550;
     text2.x     = 100;
-    text2.width = 1080;
+    text2.width = 1080 - 200;
     text2.height = 570;
   
     touchLayer.addChild(text2);
   
     //シーン名が渡されます
     text2.addEventListener('touchstart',function(e){
-        this.GoNextScene(eval(args[3]));
+      _this.GoNextScene(eval(args[3]));
     });
   
   
