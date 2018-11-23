@@ -1,5 +1,6 @@
 class StoryScene{
 
+  
   //コンストラクタ
   constructor(core){
     this.core = core;
@@ -92,7 +93,7 @@ class StoryScene{
           whosay.color = "rgb(255, 255, 255)";
           whosay.y     = 1300;
           whosay.x     = 100;
-          whosay.width = 1080;
+          whosay.width = 1080 - 200;
           whosay.height = 570;
           whosay.opacity = 0;
           whosay.tl.fadeIn(15);
@@ -107,7 +108,7 @@ class StoryScene{
           text.color = "rgb(255, 255, 255)";
           text.y     = 1400;
           text.x     = 100;
-          text.width = 1080;
+          text.width = 1080 - 200;
           text.height = 570;
   
           text.opacity = 0;
@@ -123,8 +124,9 @@ class StoryScene{
           nextlabel.x = 850;
           nextlabel.opacity = 0;
           nextlabel.tl.fadeIn(20);
-          textLayer.addChild(nextlabel);
+          touchLayer.addChild(nextlabel);
   
+          /*
           //戻るボタン
           let backLabel = new Label("< ▲ >");
           backLabel.font  = "50px monospace";
@@ -133,10 +135,14 @@ class StoryScene{
           backLabel.x = 50;
           backLabel.opacity = 0;
           backLabel.tl.fadeIn(20);
-          textLayer.addChild(backLabel);
-  
-  
-  
+          touchLayer.addChild(backLabel);
+          */
+
+
+
+         var _this = this;
+    
+           
           //次へボタン
           //配列に要素があればラベルを書き換える
           nextlabel.addEventListener('touchstart',function(e){
@@ -145,10 +151,11 @@ class StoryScene{
                   text.text = args[i];
                 }else{
                   //セリフの配列が空になった時に次のシーンへ飛ばす
-                  executeNext(eval(getNextSceneName()));
+                  _this.GoNextScene(eval(_this.GetNextSceneName()));
                 }
           });
   
+          /*
           //戻るボタン
           backLabel.addEventListener('touchstart',function(e){
             if(i != 1){
@@ -158,17 +165,29 @@ class StoryScene{
               //処理なし
             }
           });
+          */
   
   
       }//end SetText
   
   
   
-    SetNextSceneName(name){
-        this.nextSceneName = name;
-    }
+      SetNextSceneName(name){
+          this.nextSceneName = name;
+      }
+
+      GetNextSceneName(){
+          return this.nextSceneName;
+      }
   
-  
+      ExecuteScene(args){
+        for (var command in args) {
+          var s = (this[command])(args[command]);
+        }
+      }
+
+
+
     //次のシーンへ遷移する
     GoNextScene(args){
   
@@ -180,52 +199,52 @@ class StoryScene{
       textLayer.removeChild(textLayer.lastChild);
       textLayer.removeChild(textLayer.firstChild);
   
-  
+
+
       //ここで関数名と引数のセットを持ってきています
         for(let val in args){
-            _currentScene[val](args[val]);
+            this[val](args[val]);
         }
-  
+
+       // return getNextSceneName();
     }
-  
-  
-  
-  
-  
-  
+
+
+
+
   /*       選択肢のある画面です             */
   
   SetChoiceScene(args){
     //選択肢１
     let text = new Label(args[0]);
-    text.font  = "16px monospace";
+    text.font  = "50px monospace";
     text.color = "rgb(255, 255, 255)";
-    text.y     = 180;
-    text.x = 10;
-    text.width = 300;
-    text.height = 120;
+    text.y     = 1400;
+    text.x     = 100;
+    text.width = 1080;
+    text.height = 570;
   
-    textLayer.addChild(text);
+    touchLayer.addChild(text);
   
     //シーン名が渡されます
     text.addEventListener('touchstart',function(e){
-          executeNext(eval(args[1]));
+        this.GoNextScene(eval(args[1]));
     });
   
     //選択肢２
     let text2 = new Label(args[2]);
-    text2.font  = "16px monospace";
+    text2.font  = "50px monospace";
     text2.color = "rgb(255, 255, 255)";
-    text2.y     = 230;
-    text2.x = 10;
-    text2.width = 300;
-    text2.height = 120;
+    text2.y     = 1550;
+    text2.x     = 100;
+    text2.width = 1080;
+    text2.height = 570;
   
-    textLayer.addChild(text2);
+    touchLayer.addChild(text2);
   
     //シーン名が渡されます
     text2.addEventListener('touchstart',function(e){
-        executeNext(eval(args[3]));
+        this.GoNextScene(eval(args[3]));
     });
   
   

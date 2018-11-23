@@ -1,6 +1,8 @@
 enchant();
 
 
+
+
 window.onload = function(){
 
 var core = new Core(1080, 1920);
@@ -9,7 +11,12 @@ var core = new Core(1080, 1920);
 var _ss = new StoryScene(core);
 
 
-    core.fps = 15;
+
+
+
+
+
+core.fps = 15;
 
 
     core.preload("img/chara1.png","img/chara2.png","img/chara3.png","img/フレーム.png","img/背景.png","img/テキストエリア.png","img/主人公.png");
@@ -29,28 +36,35 @@ var _ss = new StoryScene(core);
 
         taLayer = new Group();
         core.rootScene.addChild(taLayer);
-
-        frameLayer = new Group();
-        core.rootScene.addChild(frameLayer);
         
         textLayer = new Group();
         core.rootScene.addChild(textLayer);
 
+        frameLayer = new Group();
+        core.rootScene.addChild(frameLayer);
+
+        touchLayer = new Group();
+        core.rootScene.addChild(touchLayer);
 
         //テキストエリアとフレームをセットする
         _ss.SetTextAreaImage();
         _ss.SetFrameImage();
 
 
-        _ss.SetBackGroundImage("img/背景.png");
-        _ss.SetCharactor("img/主人公.png");
+        //_ss.SetBackGroundImage("img/背景.png");
+        //_ss.SetCharactor("img/主人公.png");
         //_ss.SetCharactor("img/chara2.png");
 
 
+        /*これが最初のシーンです */
+        //_ss.SetBackGroundImage("img/背景.png");
+        //_ss.SetChoiceScene(["▶︎ ゲームスタート",'sceneA001',"▶︎ ゲームを始める",'sceneA001']);
+
+        _ss.ExecuteScene(sceneA001);
 
 
 
-        _ss.SetText(['モンスターが現れた！','違った、主人公だったｗ','間違えんなよ！']);
+        //_ss.SetText(['モンスターが現れた！','違った、主人公だったｗ','間違えんなよ！']);
         
 
 

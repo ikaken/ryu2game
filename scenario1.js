@@ -7,29 +7,38 @@ titlescene = {
   'SetChoiceScene': [" ▶︎ もう一度プレイする","scene1"," ▶︎ すごいヒントを見る","sugoihinto"],
 }
 
+
+sceneA001 = {
+  'DeleteCharactor':"",
+  'SetBackGroundImage' : 'img/背景.png',
+  'SetCharactor': 'img/主人公.png',
+  'SetText': ['モンスターが現れた！','違った、主人公だったｗ','間違えんなよ！'],
+  'SetNextSceneName' : 'sceneA002'
+}
+
+sceneA002 = {
+  'DeleteCharactor':"",
+  'SetBackGroundImage' : 'img/背景.png',
+  'SetCharactor': 'img/主人公.png',
+  'SetText': ['主人公が現れた','','・・・で？'],
+  'SetNextSceneName' : 'sceneA003'
+}
+
+sceneA003 = {
+  'DeleteCharactor':"",
+  'SetBackGroundImage' : 'img/背景.png',
+  'SetCharactor': 'img/chara2.png',
+  'SetText': ["モンスターが現れた！","本当に現れた！？","寿限無、寿限無  五劫の擦り切れ  海砂利水魚の  水行末 雲来末 風来末  食う寝る処に住む処  藪ら柑子の藪柑子  パイポ　パイポ　パイポのシューリンガン  シューリンガンのグーリンダイ  グーリンダイのポンポコピーのポンポコナーの  長久命の長助"],
+  'SetNextSceneName' : 'sceneA001'
+}
+
+
 scene4A = {
   'AddPlayerStatusPlane' : ['nenepoint',1],
   'SetText': ['ねね','ふーん　ってあんまり興味ないの？','彼女いないくせに（笑）'],
   'SetNextSceneName':'scene5'
 }
 
-
-scene7 = {
-  'DeleteCharactor':"",
-  'SetBackGroundImage' : 'kyositu.jpg',
-  'SetCharactorLeft': 'nene.png',
-  'SetText': ["ねね","あの子が転校生かな","もうちょっとしたら自己紹介タイムだね","なんて名前なんだろ〜？"],
-  'SetNextSceneName' : 'scene8'
-}
-
-scene21 = {
-  'DeleteCharactor':"",
-  'SetBackGroundImage' : 'akoen.jpg',
-  'SetCharactorRight': 'miya.png',
-  'SetCharactorLeft': 'nene.png',
-  'SetText': ["","むむっ！ねねとみやちゃんがいる！どっちに話しかけようかな・・・？"],
-  'SetNextSceneName' : 'scene22'
-}
 
 scene35B3 = {
   'AddPlayerStatusPlane' : ['nenepoint',1],
