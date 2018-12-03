@@ -12,20 +12,27 @@ var _ss = new StoryScene(core);
 
 
 
-
+imglist = ["img/chara1.png","img/chara2.png","img/chara3.png","img/フレーム.png","img/背景.png","img/テキストエリア.png","img/主人公.png"]
+bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3","sound/game_maoudamashii_5_town11.mp3","sound/bgm_maoudamashii_fantasy06.mp3","sound/bgm_maoudamashii_fantasy07.mp3","sound/bgm_maoudamashii_fantasy11.mp3"]
 
 
 
 core.fps = 15;
 
 
-    core.preload("img/chara1.png","img/chara2.png","img/chara3.png","img/フレーム.png","img/背景.png","img/テキストエリア.png","img/主人公.png");
+    core.preload(imglist);
+    core.preload(bgmlist);
 
 
     core.onload = function(){
 
 
+        core.bgm = Sound.load('sound/bgm_maoudamashii_fantasy11.mp3');
+        core.bgm.volume = 0.3;
+        core.bgm.play();
+        core.bgm.loop = true;
 
+        
 
         //レイヤーで管理する
         bgLayer = new Group();
