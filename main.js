@@ -2,6 +2,8 @@ enchant();
 
 
 
+var GoScene;
+
 
 window.onload = function(){
 
@@ -9,16 +11,36 @@ var core = new Core(1080, 1920);
 
 // シーンを生成する
 var _ss = new StoryScene(core);
+var _bs = new BattleScene(core);
 
 
-
-imglist = ["img/chara1.png","img/chara2.png","img/chara3.png","img/フレーム.png","img/背景.png","img/テキストエリア.png","img/主人公.png"]
+imglist = ["img/chara2.png","img/chara2s.png","img/chara2b.png","img/フレーム.png","img/背景.png","img/テキストエリア.png","img/主人公.png"]
 bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3","sound/game_maoudamashii_5_town11.mp3","sound/bgm_maoudamashii_fantasy06.mp3","sound/bgm_maoudamashii_fantasy07.mp3","sound/bgm_maoudamashii_fantasy11.mp3"]
 
+  //次のシーンへ遷移する
+  GoScene = function(args) {
+
+    //テキストと次へボタンを削除する
+    textLayer.removeChild(textLayer.firstChild);
+    textLayer.removeChild(textLayer.firstChild);
+    textLayer.removeChild(textLayer.lastChild);
+    textLayer.removeChild(textLayer.lastChild);
+    touchLayer.removeChild(touchLayer.firstChild);
+    touchLayer.removeChild(touchLayer.firstChild);
+    touchLayer.removeChild(touchLayer.firstChild);
+    touchLayer.removeChild(touchLayer.firstChild);
+
+    //ここで関数名と引数のセットを持ってきています
+    for (let val in args) {
+      this[val](args[val]);
+    }
+
+    // return getNextSceneName();
+  }
 
 
-core.fps = 15;
 
+    core.fps = 15;
 
     core.preload(imglist);
     core.preload(bgmlist);
