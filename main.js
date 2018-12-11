@@ -14,7 +14,7 @@ var _ss = new StoryScene(core);
 var _bs = new BattleScene(core);
 
 
-imglist = ["img/chara2.png","img/chara2s.png","img/chara2b.png","img/フレーム.png","img/背景.png","img/テキストエリア.png","img/主人公.png"]
+imglist = ["img/じぇるぴ哀.png","img/じぇるぴ楽.png","img/じぇるぴ喜.png","img/じぇるぴ怒.png","img/テキストエリア.png","img/フレーム.png","img/モンスター1.png","img/モンスター1s.png","img/モンスター2.JPG","img/モンスター3.png","img/モンスター4.JPG","img/モンスター5.jpg","img/モンスター6.png","img/モンスター7.png","img/モンスター8.jpg","img/ユユコ哀.jpg","img/ユユコ喜楽.jpg","img/ユユコ怒.jpg","img/主人公.png","img/主人公2.jpg","img/主人公3.jpg","img/主人公4.jpg","img/背景.png"]
 bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3","sound/game_maoudamashii_5_town11.mp3","sound/bgm_maoudamashii_fantasy06.mp3","sound/bgm_maoudamashii_fantasy07.mp3","sound/bgm_maoudamashii_fantasy11.mp3"]
 
   //次のシーンへ遷移する
@@ -49,12 +49,6 @@ bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3","sound/game_maoudamashii_5_tow
     core.onload = function(){
 
 
-        core.bgm = Sound.load('sound/bgm_maoudamashii_fantasy11.mp3');
-        core.bgm.volume = 0.3;
-        core.bgm.play();
-        core.bgm.loop = true;
-
-        
 
         //レイヤーで管理する
         bgLayer = new Group();
