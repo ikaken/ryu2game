@@ -10,8 +10,11 @@ class StoryScene {
 
   // BGMを鳴らす
   PlayBGM(args) {
-    var sound = this.core.assets[args].clone();
-    sound.play();
+    if (this.bgmf = false) {
+      var sound = this.core.assets[args].clone();
+      sound.play();
+      this.bgmf = true;
+    }
   }
 
   //背景画像をシーンに設定する
