@@ -1,20 +1,19 @@
-class StoryScene {
+class BattleScene {
 
 
   //コンストラクタ
   constructor(core) {
-    // coreインスタンスを引き継ぐ
     this.core = core;
-    this.bgmf = false;  // BGM再生フラグ
+    //特に処理なしにしています
   }
 
-  // BGMを鳴らす
+
   PlayBGM(args) {
-    if (this.bgmf = false) {
-      var sound = this.core.assets[args].clone();
-      sound.play();
-      this.bgmf = true;
-    }
+    this.core.bgm.stop();
+    this.core.bgm = Sound.load(args);
+    this.core.bgm.volume = 0.3;
+    this.core.bgm.play();
+    this.core.bgm.loop = true;
   }
 
   //背景画像をシーンに設定する
@@ -317,5 +316,3 @@ class StoryScene {
 
 
 } //End Class
-
-
