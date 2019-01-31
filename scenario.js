@@ -3,8 +3,17 @@
 titlescene = {
   'DeleteCharactor':"",
   'SetBackGroundImage' : 'img/背景.png',
-  'SetChoiceScene': [" ▶︎ もう一度プレイする","sceneA001"," ▶︎ モンスターからやり直す","sceneA003"],
+  'SetChoiceScene': [" ▶︎ もう一度プレイする","sceneA001"," ▶︎ モンスターからやり直す","sceneB001"],
 }
+
+
+
+sceneB001 = {
+  'GoBattleScene': '',
+//  'SetNextSceneName' : 'sceneA003'
+}
+
+
 
 
 sceneA001 = {
