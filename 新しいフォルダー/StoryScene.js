@@ -25,18 +25,18 @@ class StoryScene {
     backImage.y = 0;
     bgLayer.addChild(backImage);
   }
-  //tekisutoeriaをシーンに設定する
+  //テキストエリアをシーンに設定する
   SetTextAreaImage() {
     let taImage = new Sprite(1080, 570);
-    taImage.image = this.core.assets["img/tekisutoeria.png"];
+    taImage.image = this.core.assets["img/テキストエリア.png"];
     taImage.x = 0;
     taImage.y = 1220;
     taLayer.addChild(taImage);
   }
-  //fure-muをシーンに設定する
+  //フレームをシーンに設定する
   SetFrameImage() {
     let frameImage = new Sprite(1080, 1920);
-    frameImage.image = this.core.assets["img/fure-mu.png"];
+    frameImage.image = this.core.assets["img/フレーム.png"];
     frameImage.x = 0;
     frameImage.y = 0;
     frameLayer.addChild(frameImage);
