@@ -31,6 +31,12 @@ var Player = enchant.Class.create(enchant.Sprite, {
     });
 
     this.tl.moveTo(this.x, this.y, 10);
+
+    
+    this.tl.then(function () {
+      target.attackTo(this);
+    });
+
   }
   
 });
@@ -210,7 +216,7 @@ window.onload = function () {
 
       Player01.attackTo(enemy01);
 //      enemy01.attackTo(Player01);
-      
+
 
 
     });
