@@ -7,7 +7,7 @@ var Player = enchant.Class.create(enchant.Sprite, {
     enchant.Sprite.call(this, 192, 256);
     this.x = 700;
     this.y = 500;
-    this.image = core_.assets['img/syujinkous.png'];
+    this.image = core_.assets['img/主人公s.png'];
     this.frame = 5;
   },
   attackTo: function (target) {
@@ -41,7 +41,7 @@ var enemy = enchant.Class.create(enchant.Sprite, {
     enchant.Sprite.call(this, 192, 256);
     this.x = 300;
     this.y = 500;
-    this.image = core_.assets['img/monnsuta1s.png'];
+    this.image = core_.assets['img/モンスター1s.png'];
     this.frame = 5;
     this.hp = 100;
   },
@@ -72,7 +72,7 @@ var enemy = enchant.Class.create(enchant.Sprite, {
     console.log(this.hp); //hp表示
 
     if (this.hp > 0) {
-      let whosay = new Label("monnsutaは" + attackPoint + "のダメージを受けた。");
+      let whosay = new Label("モンスターは" + attackPoint + "のダメージを受けた。");
       whosay.font = "50px monospace";
       whosay.color = "rgb(255, 255, 255)";
       whosay.y = 1300;
@@ -84,7 +84,7 @@ var enemy = enchant.Class.create(enchant.Sprite, {
   
       textLayer.addChild(whosay);
     } else {
-      let whosay = new Label("monnsutaを倒した。");
+      let whosay = new Label("モンスターを倒した。");
       whosay.font = "50px monospace";
       whosay.color = "rgb(255, 255, 255)";
       whosay.y = 1300;
@@ -116,9 +116,9 @@ var _ss = new StoryScene(core);
 var _bs = new BattleScene(core);
 
 
-//imglist = ["img/jyerupi-ai.png","img/jyerupi-raku.png","img/jyerupi-ki.png","img/jyerupi-do.png","img/tekisutoeria.png","img/fure-mu.png","img/monnsuta1.png","img/monnsuta1s.png","img/monnsuta2.JPG","img/monnsuta3.png","img/monnsuta4.JPG","img/monnsuta5.jpg","img/monnsuta6.png","img/monnsuta7.png","img/monnsuta8.jpg","img/yuyuko-ai.jpg","img/yuyuko-ki-raku.jpg","img/yuyuko-do.jpg","img/syujinkou.png","img/syujinkou2.jpg","img/syujinkou3.jpg","img/syujinkou4.jpg","img/haikei.png"]
+//imglist = ["img/じぇるぴ哀.png","img/じぇるぴ楽.png","img/じぇるぴ喜.png","img/じぇるぴ怒.png","img/テキストエリア.png","img/フレーム.png","img/モンスター1.png","img/モンスター1s.png","img/モンスター2.JPG","img/モンスター3.png","img/モンスター4.JPG","img/モンスター5.jpg","img/モンスター6.png","img/モンスター7.png","img/モンスター8.jpg","img/ユユコ哀.jpg","img/ユユコ喜楽.jpg","img/ユユコ怒.jpg","img/主人公.png","img/主人公2.jpg","img/主人公3.jpg","img/主人公4.jpg","img/背景.png"]
 //bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3","sound/game_maoudamashii_5_town11.mp3","sound/bgm_maoudamashii_fantasy06.mp3","sound/bgm_maoudamashii_fantasy07.mp3","sound/bgm_maoudamashii_fantasy11.mp3"]
-imglist = ["img/kougeki.png", "img/jyerupi-ai.png", "img/jyerupi-raku.png", "img/jyerupi-ki.png", "img/jyerupi-do.png", "img/tekisutoeria.png", "img/fure-mu.png", "img/monnsuta1.png", "img/monnsuta1s.png", "img/monnsuta2.JPG", "img/monnsuta3.png", "img/monnsuta4.JPG", "img/monnsuta5.jpg", "img/monnsuta6.png", "img/monnsuta7.png", "img/monnsuta8.jpg", "img/yuyuko-ai.jpg", "img/yuyuko-ki-raku.jpg", "img/yuyuko-do.jpg", "img/syujinkou.png", "img/syujinkous.png", "img/syujinkou2.jpg", "img/syujinkou3.jpg", "img/syujinkou4.jpg", "img/haikei.png"]
+imglist = ["img/kougeki.png", "img/じぇるぴ哀.png", "img/じぇるぴ楽.png", "img/じぇるぴ喜.png", "img/じぇるぴ怒.png", "img/テキストエリア.png", "img/フレーム.png", "img/モンスター1.png", "img/モンスター1s.png", "img/モンスター2.JPG", "img/モンスター3.png", "img/モンスター4.JPG", "img/モンスター5.jpg", "img/モンスター6.png", "img/モンスター7.png", "img/モンスター8.jpg", "img/ユユコ哀.jpg", "img/ユユコ喜楽.jpg", "img/ユユコ怒.jpg", "img/主人公.png", "img/主人公s.png", "img/主人公2.jpg", "img/主人公3.jpg", "img/主人公4.jpg", "img/背景.png"]
 bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3", "sound/game_maoudamashii_5_town11.mp3", "sound/bgm_maoudamashii_fantasy06.mp3", "sound/bgm_maoudamashii_fantasy07.mp3", "sound/bgm_maoudamashii_fantasy11.mp3"]
 
   //次のシーンへ遷移する
@@ -244,18 +244,18 @@ bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3", "sound/game_maoudamashii_5_to
         touchLayer = new Group();
         core.rootScene.addChild(touchLayer);
 
-        //tekisutoeriaとfure-muをセットする
+        //テキストエリアとフレームをセットする
         _ss.SetTextAreaImage();
         _ss.SetFrameImage();
 
 
-        //_ss.SetBackGroundImage("img/haikei.png");
-        //_ss.SetCharactor("img/syujinkou.png");
+        //_ss.SetBackGroundImage("img/背景.png");
+        //_ss.SetCharactor("img/主人公.png");
         //_ss.SetCharactor("img/chara2.png");
 
 
         /*これが最初のシーンです */
-        //_ss.SetBackGroundImage("img/haikei.png");
+        //_ss.SetBackGroundImage("img/背景.png");
         //_ss.SetChoiceScene(["▶︎ ゲームスタート",'sceneA001',"▶︎ ゲームを始める",'sceneA001']);
 
 //        _ss.ExecuteScene(sceneA001);
@@ -263,7 +263,7 @@ bgmlist = ["sound/bgm_maoudamashii_fantasy14.mp3", "sound/game_maoudamashii_5_to
         ScenarioLoop(sceneA001);
 
 
-        //_ss.SetText(['monnsutaが現れた！','違った、syujinkouだったｗ','間違えんなよ！']);
+        //_ss.SetText(['モンスターが現れた！','違った、主人公だったｗ','間違えんなよ！']);
         
 
 

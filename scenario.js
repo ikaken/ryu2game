@@ -2,15 +2,17 @@
 
 titlescene = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetChoiceScene': [" ▶︎ もう一度プレイする","sceneA001"," ▶︎ モンスターからやり直す","sceneB001"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetChoiceScene': [" ▶︎ 話し合う","sceneA001"," ▶︎ 戦う","sceneB001"],
 }
 
 
 
 sceneB001 = {
-  'GoBattleScene': '',
-//  'SetNextSceneName' : 'sceneA003'
+  'DeleteCharactor':"",
+  //バトル
+  'GoBattleScene' : "",
+  'SetNextSceneName' : 'sceneA001'
 }
 
 
@@ -18,111 +20,111 @@ sceneB001 = {
 
 sceneA001 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
+  'SetBackGroundImage' : 'img/haikei.png',
   'PlayBGM' : 'sound/bgm_maoudamashii_fantasy11.mp3',
-  'SetCharactor': 'img/主人公.png',
-  'SetText': ['モンスターが現れた！','違った、主人公だったｗ','間違えんなよ！'],
+  'SetCharactor': 'img/syujinkou.png',
+  'SetText': ['monnsutaが現れた！','違った、syujinkouだったｗ','間違えんなよ！'],
   'SetNextSceneName' : 'sceneA002'
 }
 
 sceneA002 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/主人公4.jpg',
-  'SetText': ['主人公が現れた','','・・・で？'],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/syujinkou4.jpg',
+  'SetText': ['syujinkouが現れた','','・・・で？'],
   'SetNextSceneName' : 'sceneA003'
 }
 
 sceneA003 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター1.png',
-  'SetText': ["モンスターが現れた！","本当に現れた！？","寿限無、寿限無  五劫の擦り切れ  海砂利水魚の  水行末 雲来末 風来末  食う寝る処に住む処  藪ら柑子の藪柑子  パイポ　パイポ　パイポのシューリンガン  シューリンガンのグーリンダイ  グーリンダイのポンポコピーのポンポコナーの  長久命の長助"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta1.png',
+  'SetText': ["monnsutaが現れた！","本当に現れた！？","寿限無、寿限無  五劫の擦り切れ  海砂利水魚の  水行末 雲来末 風来末  食う寝る処に住む処  藪ら柑子の藪柑子  パイポ　パイポ　パイポのシューリンガン  シューリンガンのグーリンダイ  グーリンダイのポンポコピーのポンポコナーの  長久命の長助"],
   'SetNextSceneName' : 'sceneA004'
 }
 
 
 sceneA004 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター2.JPG',
-  'SetText': ["モンスターが現れた！","また現れた！？"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta2.JPG',
+  'SetText': ["monnsutaが現れた！","また現れた！？"],
   'SetNextSceneName' : 'sceneA005'
 }
 
 sceneA005 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター3.png',
-  'SetText': ["モンスターが現れた！","また現れた！？"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta3.png',
+  'SetText': ["monnsutaが現れた！","また現れた！？"],
   'SetNextSceneName' : 'sceneA006'
 }
 
 sceneA006 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/じぇるぴ楽.png',
-  'SetText': ["じぇるぴ","何匹出てくるのでしょうか・・・"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/jyerupi-raku.png',
+  'SetText': ["jyerupi","何匹出てくるのでしょうか・・・"],
   'SetNextSceneName' : 'sceneA007'
 }
 
 sceneA007 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター4.JPG',
-  'SetText': ["モンスターが現れた！","まだまだ出てくる！"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta4.JPG',
+  'SetText': ["monnsutaが現れた！","まだまだ出てくる！"],
   'SetNextSceneName' : 'sceneA008'
 }
 
 sceneA008 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター5.jpg',
-  'SetText': ["モンスターが現れた！","まだまだ出てくる！"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta5.jpg',
+  'SetText': ["monnsutaが現れた！","まだまだ出てくる！"],
   'SetNextSceneName' : 'sceneA009'
 }
 
 
 sceneA009 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター6.png',
-  'SetText': ["モンスターが現れた！","まだまだ出てくる！"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta6.png',
+  'SetText': ["monnsutaが現れた！","まだまだ出てくる！"],
   'SetNextSceneName' : 'sceneA010'
 }
 
 
 sceneA010 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター7.png',
-  'SetText': ["モンスターが現れた！","まだまだ出てくる！"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta7.png',
+  'SetText': ["monnsutaが現れた！","まだまだ出てくる！"],
   'SetNextSceneName' : 'sceneA011'
 }
 
 
 sceneA011 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/モンスター8.jpg',
-  'SetText': ["モンスターが現れた！","まだまだ出てくる！"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/monnsuta8.jpg',
+  'SetText': ["monnsutaが現れた！","まだまだ出てくる！"],
   'SetNextSceneName' : 'sceneA012'
 }
 
 
 sceneA012 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/ユユコ怒.jpg',
-  'SetText': ["ユユコ","モンスター多いよ！"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/yuyuko-do.jpg',
+  'SetText': ["yuyuko","monnsuta多いよ！"],
   'SetNextSceneName' : 'titlescene'
 }
 
 sceneA013 = {
   'DeleteCharactor':"",
-  'SetBackGroundImage' : 'img/背景.png',
-  'SetCharactor': 'img/ユユコ怒.jpg',
-  'SetText': ["ユユコ","モンスター多いよ！"],
+  'SetBackGroundImage' : 'img/haikei.png',
+  'SetCharactor': 'img/yuyuko-do.jpg',
+  'SetText': ["yuyuko","monnsuta多いよ！"],
   'SetNextSceneName' : 'sceneA004'
 }
 
